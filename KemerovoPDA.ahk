@@ -8,7 +8,7 @@ DriveGet, Serial, Serial, C:\\
 Global HWID := Abs(Serial)
 Global ExpectedKey := "KEM-" . ((HWID * 3) + 777) . "-" . ((HWID * 7) + 1337)
 Global PROMO_SECRET := 7331
-Global AppVersion := "1.4"
+Global AppVersion := "1.5"
 
 ; --- ПРОВЕРКА ОБНОВЛЕНИЙ ---
 try {
@@ -42,8 +42,8 @@ try {
                     (LTrim
                     @echo off
                     timeout /t 2 /nobreak >nul
-                    move /y "KemerovoPDA_new.exe" "%A_ScriptName%"
-                    start "" "%A_ScriptName%"
+                    move /y "%A_WorkingDir%\KemerovoPDA_new.exe" "%A_ScriptFullPath%"
+                    start "" "%A_ScriptFullPath%"
                     del "`%~f0"
                     )
                     FileDelete, update_pda.bat
