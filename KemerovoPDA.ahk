@@ -230,8 +230,8 @@ F2::
         Gui, Hide
         IsMenuOpen := false
     } else {
-        Gui, Show, w510 h410, Kemerovo PDA - Настройки
-        WinSet, AlwaysOnTop, On, Kemerovo PDA - Настройки
+        Gui, Show, w510 h410, Kemerovo PDA v%AppVersion% - Настройки
+        WinSet, AlwaysOnTop, On, Kemerovo PDA v%AppVersion% - Настройки
         IsMenuOpen := true
     }
 return
